@@ -2,7 +2,11 @@ function izracunaj()
 {
 	var x = Number(document.getElementById("visina").value);
 	
-	if(x <= 155)
+	if(x <= 120)
+	{
+		document.getElementById("rez").innerHTML = "Vama preporučujemo dječiji bicikl";
+	}
+	if(x > 121 && x <= 155)
 	{
 		document.getElementById("rez").innerHTML = "Veličina okvira bicikla je XS";
 	}
@@ -22,8 +26,12 @@ function izracunaj()
 	{
 		document.getElementById("rez").innerHTML = "Veličina okvira bicikla je XL";
 	}
-	if(x > 192)
+	if(x > 192 && x <= 209)
 	{
 		document.getElementById("rez").innerHTML = "Veličina okvira bicikla je XXL";
+	}
+	if(x > 210)
+	{
+		document.getElementById("rez").innerHTML = "Vaša veličina je izvan okvira";
 	}
 } 
